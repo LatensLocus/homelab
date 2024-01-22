@@ -55,16 +55,6 @@ Run as logged-on user.
 ansible all -m apt -a "upgrade=yes update_cache=yes autoremove=yes cache_valid_time=86400"
 ```
 
-Run as logged-on user on PVE01 servers.
-```bash
-ansible pve01:omadactrl:mgmtwks:zabbix:kuma01:wazuh:plex:searx01:adguard01:unbound01 -m apt -a "upgrade=yes update_cache=yes autoremove=yes cache_valid_time=86400"
-```
-
-Run as logged-on user on PVE02 servers.
-```bash
-ansible pve02:kuma02:searx02:adguard02:unbound02 -m apt -a "upgrade=yes update_cache=yes autoremove=yes cache_valid_time=86400"
-```
-
 #### Install and remove packages
 
 Install a package.
