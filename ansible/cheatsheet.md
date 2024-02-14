@@ -19,6 +19,7 @@ Display the list of the inventory file.
 ansible-inventory --list -y
 ```
 
+
 #### Run an adhoc update, upgrade and remove apt command
 
 Run as privileged user.
@@ -30,6 +31,7 @@ Run as logged-on user.
 ```bash
 ansible all -m apt -a "upgrade=yes update_cache=yes autoremove=yes cache_valid_time=86400"
 ```
+
 
 #### Install and remove packages
 
@@ -43,12 +45,14 @@ Remove a package.
 ansible all -m apt -a "name=nginx state=absent" --become  -K
 ```
 
+
 #### Restarting servers
 
 Run command.
 ```bash
 ansible all -a "/sbin/reboot"  --become  -K
 ```
+
 
 #### Restarting services
 
